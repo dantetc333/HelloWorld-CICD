@@ -14,30 +14,36 @@ steps:
   displayName: 'Install NuGet Tool'
 
 - task: NuGetCommand@2
+  displayName: 'Restaurando packetes de NuGet'
   inputs:
     restoreSolution: '$(solution)'
-  displayName: 'Restore NuGet Packages'
+
 
 - task: VSBuild@1
   inputs:
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip"'
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation=$(build.artifactStagingDirectory)\WebApp.zip'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
 
 
 - task: VSTest@2
+  displayName: 'Run Pruebas Unitarias'
   inputs:
     testAssemblyVer2: '**\$(BuildConfiguration)\*test*.dll'
-  displayName: 'Run Pruebas Unitarias'
+
 
 
 - task: PublishBuildArtifacts@1
+  displayName: 'Publish'
   inputs:
     PathtoPublish: '$(build.artifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-  displayName: 'Publish Build Artifacts'
+
 
 - task: AzureRmWebAppDeployment@4
-  displayName: 'Deploy to Azure Web App'
+  displayName: 'Desplegando'
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Azure for Students(a21dc482-9ab7-42fe-9bf2-226911506eec)'
