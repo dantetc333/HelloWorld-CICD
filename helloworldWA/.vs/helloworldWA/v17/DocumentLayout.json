@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dante\\OneDrive\\Documentos\\Programming\\Visual Studio\\helloworld_project\\helloworldWA\\",
+  "WorkspaceRootPath": "C:\\Users\\dante\\OneDrive\\Documentos\\Programming\\Visual Studio\\helloworldWA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1377A4E5-1AFE-457A-8C09-3DB32A6F54D5}|helloworldWA.csproj|c:\\users\\dante\\onedrive\\documentos\\programming\\visual studio\\helloworld_project\\helloworldwa\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{1377A4E5-1AFE-457A-8C09-3DB32A6F54D5}|helloworldWA.csproj|solutionrelative:style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{1377A4E5-1AFE-457A-8C09-3DB32A6F54D5}|helloworldWA.csproj|C:\\Users\\dante\\OneDrive\\Documentos\\Programming\\Visual Studio\\helloworldWA\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1377A4E5-1AFE-457A-8C09-3DB32A6F54D5}|helloworldWA.csproj|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1377A4E5-1AFE-457A-8C09-3DB32A6F54D5}|helloworldWA.csproj|c:\\users\\dante\\onedrive\\documentos\\programming\\visual studio\\helloworld_project\\helloworldwa\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1377A4E5-1AFE-457A-8C09-3DB32A6F54D5}|helloworldWA.csproj|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1377A4E5-1AFE-457A-8C09-3DB32A6F54D5}|helloworldWA.csproj|c:\\users\\dante\\onedrive\\documentos\\programming\\visual studio\\helloworldwa\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1377A4E5-1AFE-457A-8C09-3DB32A6F54D5}|helloworldWA.csproj|solutionrelative:style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,27 +43,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\dante\\OneDrive\\Documentos\\Programming\\Visual Studio\\helloworld_project\\helloworldWA\\style.css",
-              "RelativeDocumentMoniker": "style.css",
-              "ToolTip": "C:\\Users\\dante\\OneDrive\\Documentos\\Programming\\Visual Studio\\helloworld_project\\helloworldWA\\style.css",
-              "RelativeToolTip": "style.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-11T09:52:11.443Z",
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\dante\\OneDrive\\Documentos\\Programming\\Visual Studio\\helloworldWA\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\dante\\OneDrive\\Documentos\\Programming\\Visual Studio\\helloworldWA\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-11T09:50:30.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\dante\\OneDrive\\Documentos\\Programming\\Visual Studio\\helloworld_project\\helloworldWA\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\Users\\dante\\OneDrive\\Documentos\\Programming\\Visual Studio\\helloworld_project\\helloworldWA\\index.html",
-              "RelativeToolTip": "index.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-09-11T09:50:30.041Z",
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\dante\\OneDrive\\Documentos\\Programming\\Visual Studio\\helloworldWA\\style.css",
+              "RelativeDocumentMoniker": "style.css",
+              "ToolTip": "C:\\Users\\dante\\OneDrive\\Documentos\\Programming\\Visual Studio\\helloworldWA\\style.css",
+              "RelativeToolTip": "style.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-11T09:52:11.443Z",
               "EditorCaption": ""
             }
           ]
