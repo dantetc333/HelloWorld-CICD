@@ -1,19 +1,51 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: 'my_agentpool'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: NuGetToolInstaller@1
+  displayName: 'Install NuGet Tool'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+  displayName: 'Restore NuGet Packages'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+  displayName: 'Build Solution'
+
+- task: VSTest@2
+  inputs:
+    testAssemblyVer2: '**\*.dll'
+  displayName: 'Run Pruebas Unitarias'
+
+
+
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(build.artifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+  displayName: 'Publish Build Artifacts'
+
+- task: AzureRmWebAppDeployment@4
+  displayName: 'Deploy to Azure Web App'
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure for Students(a21dc482-9ab7-42fe-9bf2-226911506eec)'
+    appType: 'webApp'
+    WebAppName: 'helloworld333'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/WebApp.zip'
