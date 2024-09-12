@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: 'my_agentpool'
+  name: 'my_agentsenati'
 
 variables:
   solution: '**/*.sln'
